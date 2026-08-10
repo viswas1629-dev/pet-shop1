@@ -2,23 +2,18 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Crown,
-  Heart,
   Award,
   ShieldCheck,
   Sparkles,
   ChevronDown,
   Clock,
   MapPin,
-  CheckCircle2,
-  Users,
-  Building
+  CheckCircle2
 } from 'lucide-react'
 
 import { PageTransition } from '../components/ui/PageTransition'
 import { SectionHeader } from '../components/ui/SectionHeader'
-import { GlassCard } from '../components/ui/GlassCard'
 import { Badge } from '../components/ui/Badge'
-import { MagneticButton } from '../components/ui/MagneticButton'
 
 import { faqData, timelineEvents } from '../data/servicesData'
 

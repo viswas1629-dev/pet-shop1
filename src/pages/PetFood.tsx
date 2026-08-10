@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Sparkles, ShoppingBag, ShieldCheck, Leaf, Heart, Star, CheckCircle, Calculator, ArrowRight } from 'lucide-react'
+import { Sparkles, ShoppingBag, ShieldCheck, Leaf, Heart, CheckCircle, Calculator } from 'lucide-react'
 
 import { PageTransition } from '../components/ui/PageTransition'
 import { SectionHeader } from '../components/ui/SectionHeader'

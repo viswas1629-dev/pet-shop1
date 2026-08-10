@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import type { HTMLMotionProps } from 'framer-motion'
 import { cn } from '../../utils/cn'
 
-interface MagneticButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface MagneticButtonProps extends Omit<HTMLMotionProps<'button'>, 'children'> {
   children: React.ReactNode
   variant?: 'primary' | 'secondary' | 'accent' | 'outline' | 'glass'
   size?: 'sm' | 'md' | 'lg' | 'xl'

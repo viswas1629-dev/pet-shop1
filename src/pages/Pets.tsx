@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Search, Sparkles, ChevronLeft, ChevronRight, Scale, Calendar } from 'lucide-react'
 
 import { PageTransition } from '../components/ui/PageTransition'
