@@ -17,15 +17,8 @@ import { Badge } from '../components/ui/Badge'
 import { MagneticButton } from '../components/ui/MagneticButton'
 import { InstagramIcon, FacebookIcon, YoutubeIcon } from '../components/ui/SocialIcons'
 
+import { sendContactEnquiry, type ContactFormInput } from '../utils/email'
 import toast from 'react-hot-toast'
-
-interface ContactFormInput {
-  name: string
-  email: string
-  phone: string
-  interest: string
-  message: string
-}
 
 export const Contact: React.FC = () => {
   const {
@@ -33,20 +26,36 @@ export const Contact: React.FC = () => {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting }
-  } = useForm<ContactFormInput>()
+  } = useForm<ContactFormInput>({
+    defaultValues: {
+      interest: 'Pet Adoption'
+    }
+  })
 
   const onSubmit = async (data: ContactFormInput) => {
-    await new Promise((resolve) => setTimeout(resolve, 800))
-    toast.success(`Thank you, ${data.name}! Your VIP consultation inquiry has been routed to our senior concierge.`, {
-      duration: 5000,
-      icon: '✨',
-      style: {
-        borderRadius: '16px',
-        background: '#ffffff',
-        color: '#1e293b'
-      }
-    })
-    reset()
+    try {
+      await sendContactEnquiry(data)
+      toast.success('Your request has been sent successfully. Our team will get back to you soon.', {
+        duration: 5000,
+        icon: '✨',
+        style: {
+          borderRadius: '16px',
+          background: '#ffffff',
+          color: '#1e293b'
+        }
+      })
+      reset()
+    } catch (error) {
+      console.error('EmailJS Submission Error:', error)
+      toast.error("We couldn't send your request right now. Please try again or contact us directly on WhatsApp.", {
+        duration: 6000,
+        style: {
+          borderRadius: '16px',
+          background: '#ffffff',
+          color: '#1e293b'
+        }
+      })
+    }
   }
 
   const quickCards = [
@@ -163,7 +172,10 @@ export const Contact: React.FC = () => {
                     </label>
                     <input
                       type="text"
-                      {...register('name', { required: 'Name is required' })}
+                      {...register('name', {
+                        required: 'Full Name is required',
+                        validate: (val) => val.trim().length > 0 || 'Full Name is required'
+                      })}
                       placeholder="e.g. Lady Victoria Vance"
                       className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all"
                     />
@@ -177,7 +189,7 @@ export const Contact: React.FC = () => {
                     <input
                       type="email"
                       {...register('email', {
-                        required: 'Email is required',
+                        required: 'Email address is required',
                         pattern: { value: /^\S+@\S+$/i, message: 'Invalid email address' }
                       })}
                       placeholder="victoria@palace.com"
@@ -223,7 +235,10 @@ export const Contact: React.FC = () => {
                   </label>
                   <textarea
                     rows={4}
-                    {...register('message', { required: 'Message is required' })}
+                    {...register('message', {
+                      required: 'Message is required',
+                      validate: (val) => val.trim().length > 0 || 'Message cannot be empty'
+                    })}
                     placeholder="Tell us about your home, family, and companion preferences..."
                     className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-600 focus:bg-white transition-all resize-none"
                   />
@@ -238,7 +253,7 @@ export const Contact: React.FC = () => {
                   disabled={isSubmitting}
                   className="w-full"
                 >
-                  {isSubmitting ? 'Sending Request...' : 'Submit VIP Request'}
+                  {isSubmitting ? 'Sending Request...' : 'Submit Email Request'}
                 </MagneticButton>
               </form>
             </GlassCard>
