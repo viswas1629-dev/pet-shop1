@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Crown, Sparkles, Phone, Menu, X, ShieldCheck } from 'lucide-react'
 import { MagneticButton } from '../ui/MagneticButton'
 import { cn } from '../../utils/cn'
+import { getWhatsAppUrl, createGeneralWhatsAppMessage } from '../../utils/whatsapp'
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -34,6 +35,8 @@ export const Navbar: React.FC = () => {
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' }
   ]
+
+  const generalWhatsAppUrl = getWhatsAppUrl(createGeneralWhatsAppMessage())
 
   return (
     <>
@@ -92,11 +95,11 @@ export const Navbar: React.FC = () => {
 
           {/* Action CTAs */}
           <div className="hidden lg:flex items-center gap-3 pointer-events-auto">
-            <Link to="/contact">
+            <a href={generalWhatsAppUrl} target="_blank" rel="noreferrer">
               <MagneticButton variant="primary" size="md" icon={<Sparkles className="w-4 h-4" />}>
                 Book Sanctuary Visit
               </MagneticButton>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle Button */}
@@ -167,11 +170,11 @@ export const Navbar: React.FC = () => {
                 </a>
               </div>
 
-              <Link to="/contact">
+              <a href={generalWhatsAppUrl} target="_blank" rel="noreferrer" className="w-full">
                 <MagneticButton variant="primary" size="lg" className="w-full">
                   Book VIP Sanctuary Visit
                 </MagneticButton>
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

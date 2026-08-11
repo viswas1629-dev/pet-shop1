@@ -56,7 +56,7 @@ export const Contact: React.FC = () => {
       value: '+1 (800) 555-PAWS',
       icon: MessageSquare,
       color: 'bg-emerald-50 text-emerald-600 border-emerald-100',
-      link: 'https://wa.me/15550192834'
+      link: 'https://wa.me/6381793062'
     },
     {
       title: 'Direct VIP Line',
@@ -149,7 +149,7 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-7">
             <GlassCard className="p-8 sm:p-10">
               <h2 className="text-2xl font-extrabold text-slate-900 mb-2">
-                Send a VIP Concierge Message
+                Send a personal Mail
               </h2>
               <p className="text-xs text-slate-500 mb-8">
                 Fill in your details below. Our sanctuary director will respond within 2 business hours.

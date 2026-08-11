@@ -4,6 +4,7 @@ import { X, Heart, ShieldCheck, Award, Sparkles, CheckCircle2, PhoneCall, Calend
 import type { Pet } from '../../types'
 import { Badge } from './Badge'
 import { MagneticButton } from './MagneticButton'
+import { getWhatsAppUrl, createPetWhatsAppMessage } from '../../utils/whatsapp'
 import toast from 'react-hot-toast'
 
 interface PetModalProps {
@@ -16,21 +17,6 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, onClose }) => {
 
   const [activeImage, setActiveImage] = useState(pet.image)
   const [isLiked, setIsLiked] = useState(false)
-  const [isInquired, setIsInquired] = useState(false)
-
-  const handleInquiry = () => {
-    setIsInquired(true)
-    toast.success(`Adoption inquiry submitted for ${pet.name}! Our senior pet concierge will contact you shortly.`, {
-      duration: 5000,
-      icon: '🐾',
-      style: {
-        borderRadius: '16px',
-        background: '#ffffff',
-        color: '#1e293b',
-        boxShadow: '0 20px 40px -15px rgba(0,0,0,0.1)'
-      }
-    })
-  }
 
   const handleToggleLike = () => {
     setIsLiked(!isLiked)
@@ -38,6 +24,8 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, onClose }) => {
       toast(`${pet.name} added to your favorites!`, { icon: '❤️' })
     }
   }
+
+  const petWhatsAppUrl = getWhatsAppUrl(createPetWhatsAppMessage(pet))
 
   return (
     <AnimatePresence>
@@ -191,25 +179,21 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, onClose }) => {
                 </div>
 
                 {/* Bottom CTA Action */}
-                <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
-                  <MagneticButton
-                    variant="primary"
-                    size="lg"
-                    className="w-full sm:flex-1"
-                    onClick={handleInquiry}
-                    disabled={isInquired}
-                  >
-                    {isInquired ? 'Inquiry Sent! Concierge Calling...' : `Schedule VIP Meet with ${pet.name}`}
-                  </MagneticButton>
-
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-center">
                   <a
-                    href="https://wa.me/15550192834"
+                    href={petWhatsAppUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full sm:w-auto px-5 py-3.5 rounded-full border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50 flex items-center justify-center gap-2 transition-colors"
+                    className="w-full"
                   >
-                    <PhoneCall className="w-4 h-4 text-emerald-600" />
-                    WhatsApp
+                    <MagneticButton
+                      variant="secondary"
+                      size="lg"
+                      className="w-full"
+                      icon={<PhoneCall className="w-4 h-4" />}
+                    >
+                      Book via WhatsApp
+                    </MagneticButton>
                   </a>
                 </div>
               </div>
