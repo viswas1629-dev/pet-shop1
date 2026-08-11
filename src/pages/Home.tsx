@@ -336,7 +336,7 @@ export const Home: React.FC = () => {
             eyebrow="Our Sacred Vow"
             eyebrowIcon={<ShieldCheck className="w-3.5 h-3.5" />}
             eyebrowVariant="emerald"
-            title="The Paw & Palace Care Guarantee"
+            title="The Mr & Mrs Care Guarantee"
             subtitle="We set the international standard for companion health, ethical breeding, and lifetime post-adoption concierge."
           />
 
@@ -489,7 +489,7 @@ export const Home: React.FC = () => {
             eyebrowIcon={<Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />}
             eyebrowVariant="amber"
             title="Loved By Extraordinary Families Worldwide"
-            subtitle="Read authentic experiences from pet parents who found their soul companions at Paw & Palace."
+            subtitle="Read authentic experiences from pet parents who found their soul companions at Mr & Mrs."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -535,7 +535,7 @@ export const Home: React.FC = () => {
             eyebrow="Visual Chronicles"
             eyebrowIcon={<InstagramIcon className="w-3.5 h-3.5" />}
             eyebrowVariant="coral"
-            title="Life Inside Paw & Palace"
+            title="Life Inside Mr & Mrs"
             subtitle="Follow our daily moments of warmth, play, and sanctuary serenity."
           />
 

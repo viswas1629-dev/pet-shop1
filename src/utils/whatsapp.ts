@@ -3,7 +3,7 @@ import type { Pet, PetFood } from '../types'
 export const WHATSAPP_NUMBER = '6381793062'
 
 export const createGeneralWhatsAppMessage = (): string => {
-  return `Hello Paw & Palace Team! 🐾
+  return `Hello Mr & Mrs Team! 🐾
 
 I would like to enquire about visiting your pet shop / sanctuary.
 
@@ -27,11 +27,11 @@ ____________________
 Please share the available options and further details.
 
 Thank you!
-Paw & Palace Customer`
+Mr & Mrs Customer`
 }
 
 export const createPetWhatsAppMessage = (pet: Pet): string => {
-  return `Hello Paw & Palace Team! 🐾
+  return `Hello Mr & Mrs Team! 🐾
 
 I am interested in booking / visiting the following pet:
 
@@ -75,11 +75,11 @@ ____________________
 Please let me know whether this pet is currently available and how I can proceed with the visit/booking.
 
 Thank you!
-Paw & Palace Customer`
+Mr & Mrs Customer`
 }
 
 export const createFoodWhatsAppMessage = (food: PetFood): string => {
-  return `Hello Paw & Palace Team! 🐾
+  return `Hello Mr & Mrs Team! 🐾
 
 I am interested in this pet food product and would like to enquire about availability and purchase details.
 
@@ -133,7 +133,7 @@ ____________________
 Please confirm the product availability, final price, and next steps.
 
 Thank you!
-Paw & Palace Customer`
+Mr & Mrs Customer`
 }
 
 export const getWhatsAppUrl = (message: string): string => {

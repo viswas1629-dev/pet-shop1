@@ -9,7 +9,7 @@ export const reviewsData: Review[] = [
     rating: 5,
     date: '2 weeks ago',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
-    comment: 'Adopting Winston from Paw & Palace was the most serene, white-glove experience imaginable. He arrived in flawless health, calm, microchipped, and already knowing basic boundary manners.',
+    comment: 'Adopting Winston from Mr & Mrs was the most serene, white-glove experience imaginable. He arrived in flawless health, calm, microchipped, and already knowing basic boundary manners.',
     location: 'Kensington, London',
     verifiedBuyer: true
   },
@@ -21,7 +21,7 @@ export const reviewsData: Review[] = [
     rating: 5,
     date: '1 month ago',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
-    comment: 'The veterinary lineage documents and DNA health clearances provided by Paw & Palace gave me complete peace of mind. Chloe is the crown jewel of our home.',
+    comment: 'The veterinary lineage documents and DNA health clearances provided by Mr & Mrs gave me complete peace of mind. Chloe is the crown jewel of our home.',
     location: 'Beverly Hills, CA',
     verifiedBuyer: true
   },
@@ -45,7 +45,7 @@ export const reviewsData: Review[] = [
     rating: 5,
     date: '1 month ago',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200',
-    comment: 'As a first-time exotic reptile keeper, the lifetime veterinary consultation access included with Paw & Palace adoption has been priceless.',
+    comment: 'As a first-time exotic reptile keeper, the lifetime veterinary consultation access included with Mr & Mrs adoption has been priceless.',
     location: 'Zurich, Switzerland',
     verifiedBuyer: true
   }

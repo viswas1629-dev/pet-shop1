@@ -15,6 +15,8 @@ const Pets = lazy(() => import('./pages/Pets').then((module) => ({ default: modu
 const PetFood = lazy(() => import('./pages/PetFood').then((module) => ({ default: module.PetFood })))
 const About = lazy(() => import('./pages/About').then((module) => ({ default: module.About })))
 const Contact = lazy(() => import('./pages/Contact').then((module) => ({ default: module.Contact })))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then((module) => ({ default: module.PrivacyPolicy })))
+const TermsOfService = lazy(() => import('./pages/TermsOfService').then((module) => ({ default: module.TermsOfService })))
 
 // Luxury Loading Screen
 const LoadingFallback = () => (
@@ -44,6 +46,10 @@ const AnimatedRoutes = () => {
         <Route path="/food" element={<PetFood />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/terms" element={<TermsOfService />} />
       </Routes>
     </AnimatePresence>
   )

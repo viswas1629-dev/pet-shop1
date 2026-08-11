@@ -157,9 +157,8 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} Paw & Palace Companion Boutique Ltd. All Rights Reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span className="hover:text-slate-400 cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-slate-400 cursor-pointer">Terms of Service</span>
-            <span className="hover:text-slate-400 cursor-pointer">Ethical Breeding Code</span>
+            <Link to="/privacy-policy" className="hover:text-slate-400 transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-slate-400 transition-colors">Terms of Service</Link>
           </div>
           <div className="flex items-center gap-1 text-slate-400">
             Crafted with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline" /> for world-class pets.

@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-base font-extrabold tracking-tight text-slate-900 leading-none">
-                PAW & PALACE
+                Mr & Mrs
               </span>
               <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 mt-0.5">
                 Luxury Boutique

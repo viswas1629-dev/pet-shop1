@@ -52,7 +52,7 @@ export const About: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
         >
-          Founded in 2012, Paw & Palace emerged from a simple realization: companion pets deserve the exact same standard of luxury, medical precision, and cage-free sanctuary living as human royalty.
+          Founded in 2012, Mr & Mrs emerged from a simple realization: companion pets deserve the exact same standard of luxury, medical precision, and cage-free sanctuary living as human royalty.
         </motion.p>
       </section>
 
@@ -64,7 +64,7 @@ export const About: React.FC = () => {
           <div className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border-4 border-white glass-card">
             <img
               src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=1000"
-              alt="Paw & Palace Sanctuary Staff"
+              alt="Mr & Mrs Sanctuary Staff"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
@@ -164,7 +164,7 @@ export const About: React.FC = () => {
 
             <div className="absolute z-10 glass-card p-6 rounded-2xl max-w-sm text-center shadow-2xl border border-white">
               <MapPin className="w-8 h-8 text-rose-500 mx-auto mb-2 animate-bounce" />
-              <h3 className="text-lg font-extrabold text-slate-900">Paw & Palace Sanctuary</h3>
+              <h3 className="text-lg font-extrabold text-slate-900">Mr & Mrs Sanctuary</h3>
               <p className="text-xs text-slate-600 mt-1 mb-4">
                 740 Royal Avenue, Mayfair, London W1J 7BR
               </p>

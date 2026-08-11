@@ -5,7 +5,7 @@ export const faqData: FAQItem[] = [
     id: 'faq-1',
     category: 'Adoption',
     question: 'What health guarantees and paperwork accompany each companion pet?',
-    answer: 'Every companion pet at Paw & Palace undergoes a multi-point veterinary exam, DNA screening for hereditary conditions, full core vaccination suite, microchipping, and comes with a 1-Year Comprehensive Health Guarantee along with official pedigree certificates.'
+    answer: 'Every companion pet at Mr & Mrs undergoes a multi-point veterinary exam, DNA screening for hereditary conditions, full core vaccination suite, microchipping, and comes with a 1-Year Comprehensive Health Guarantee along with official pedigree certificates.'
   },
   {
     id: 'faq-2',
@@ -16,7 +16,7 @@ export const faqData: FAQItem[] = [
   {
     id: 'faq-3',
     category: 'Shipping & Visits',
-    question: 'How does Paw & Palace transport pets safely across regions or internationally?',
+    question: 'How does Mr & Mrs transport pets safely across regions or internationally?',
     answer: 'We utilize climate-controlled, luxury Pet Nanny chaperones. Your companion travels inside VIP cabin accommodations accompanied by a certified veterinary handler, never in cargo holds.'
   },
   {
@@ -28,7 +28,7 @@ export const faqData: FAQItem[] = [
   {
     id: 'faq-5',
     category: 'Health & Care',
-    question: 'Does Paw & Palace provide ongoing support after adoption?',
+    question: 'Does Mr & Mrs provide ongoing support after adoption?',
     answer: 'Yes! Every adoption includes 24/7 VIP Tele-Vet Concierge access, behavioral consults, and lifetime dietary guidance for the entire life of your companion.'
   }
 ]
