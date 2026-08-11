@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Sparkles, ShoppingBag, ShieldCheck, Leaf, Heart, CheckCircle, Calculator } from 'lucide-react'
+import { Sparkles, PhoneCall, ShieldCheck, Leaf, Heart, CheckCircle, Calculator } from 'lucide-react'
 
 import { PageTransition } from '../components/ui/PageTransition'
 import { SectionHeader } from '../components/ui/SectionHeader'
@@ -9,7 +9,7 @@ import { Badge } from '../components/ui/Badge'
 import { MagneticButton } from '../components/ui/MagneticButton'
 
 import { foodData } from '../data/foodData'
-import toast from 'react-hot-toast'
+import { getWhatsAppUrl, createFoodWhatsAppMessage } from '../utils/whatsapp'
 
 export const PetFood: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
@@ -24,17 +24,6 @@ export const PetFood: React.FC = () => {
     if (selectedCategory === 'All') return true
     return item.targetCategory === selectedCategory
   })
-
-  const handleOrder = (productName: string) => {
-    toast.success(`Added ${productName} to your VIP cart!`, {
-      icon: '🥗',
-      style: {
-        borderRadius: '16px',
-        background: '#ffffff',
-        color: '#1e293b'
-      }
-    })
-  }
 
   const handleCalculateNutrition = (e: React.FormEvent) => {
     e.preventDefault()
@@ -162,14 +151,19 @@ export const PetFood: React.FC = () => {
                   </div>
                 </div>
 
-                <MagneticButton
-                  variant="secondary"
-                  size="sm"
-                  icon={<ShoppingBag className="w-4 h-4" />}
-                  onClick={() => handleOrder(food.name)}
+                <a
+                  href={getWhatsAppUrl(createFoodWhatsAppMessage(food))}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Add to Cart
-                </MagneticButton>
+                  <MagneticButton
+                    variant="secondary"
+                    size="sm"
+                    icon={<PhoneCall className="w-4 h-4" />}
+                  >
+                    Enquire on WhatsApp
+                  </MagneticButton>
+                </a>
               </div>
             </GlassCard>
           ))}

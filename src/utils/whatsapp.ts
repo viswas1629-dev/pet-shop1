@@ -1,4 +1,4 @@
-import type { Pet } from '../types'
+import type { Pet, PetFood } from '../types'
 
 export const WHATSAPP_NUMBER = '6381793062'
 
@@ -73,6 +73,64 @@ Additional Notes:
 ____________________
 
 Please let me know whether this pet is currently available and how I can proceed with the visit/booking.
+
+Thank you!
+Paw & Palace Customer`
+}
+
+export const createFoodWhatsAppMessage = (food: PetFood): string => {
+  return `Hello Paw & Palace Team! 🐾
+
+I am interested in this pet food product and would like to enquire about availability and purchase details.
+
+━━━━━━━━━━━━━━━━━━
+FOOD PRODUCT DETAILS
+━━━━━━━━━━━━━━━━━━
+
+Product Name: ${food.name}
+Brand: ${food.brand}
+Category: ${food.targetCategory}
+Suitable For: ${food.targetCategory}
+Weight: ${food.weight}
+Price: $${food.price}
+Availability: In Stock
+
+Key Ingredients:
+${food.ingredients.join(', ')}
+
+Features:
+${food.dietaryTags.join(', ')}
+
+━━━━━━━━━━━━━━━━━━
+CUSTOMER DETAILS
+━━━━━━━━━━━━━━━━━━
+
+Full Name: ____________________
+
+Phone / WhatsApp: ____________________
+
+Address: ____________________
+
+City: ____________________
+
+State: ____________________
+
+PIN / ZIP Code: ____________________
+
+━━━━━━━━━━━━━━━━━━
+REQUEST DETAILS
+━━━━━━━━━━━━━━━━━━
+
+Quantity Required: ____________________
+
+Preferred Delivery / Pickup: ____________________
+
+Preferred Date: ____________________
+
+Additional Notes:
+____________________
+
+Please confirm the product availability, final price, and next steps.
 
 Thank you!
 Paw & Palace Customer`
