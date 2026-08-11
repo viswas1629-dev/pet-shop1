@@ -13,6 +13,8 @@ export function useLenis() {
       touchMultiplier: 2,
     })
 
+    ;(window as any).lenis = lenis
+
     let rafId: number
 
     function raf(time: number) {
@@ -24,6 +26,7 @@ export function useLenis() {
 
     return () => {
       cancelAnimationFrame(rafId)
+      delete (window as any).lenis
       lenis.destroy()
     }
   }, [])

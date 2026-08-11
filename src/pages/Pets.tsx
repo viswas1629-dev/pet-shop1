@@ -10,6 +10,7 @@ import { MagneticButton } from '../components/ui/MagneticButton'
 import { PetModal } from '../components/ui/PetModal'
 
 import { petsData } from '../data/petsData'
+import { formatCurrency } from '../utils/formatCurrency'
 import type { Pet, PetCategory } from '../types'
 
 export const Pets: React.FC = () => {
@@ -178,7 +179,7 @@ export const Pets: React.FC = () => {
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-lg font-bold text-slate-900">${pet.price}</span>
+                    <span className="text-lg font-bold text-slate-900">{formatCurrency(pet.price)}</span>
                     <MagneticButton variant="primary" size="sm" onClick={() => setSelectedPet(pet)}>
                       View Details
                     </MagneticButton>
@@ -262,7 +263,7 @@ export const Pets: React.FC = () => {
                 <div className="p-5 pt-0 border-t border-slate-100/80 flex items-center justify-between mt-auto">
                   <div>
                     <div className="text-[10px] text-slate-400 font-bold uppercase">Price</div>
-                    <div className="text-base font-extrabold text-slate-900">${pet.price}</div>
+                    <div className="text-base font-extrabold text-slate-900">{formatCurrency(pet.price)}</div>
                   </div>
 
                   <MagneticButton variant="primary" size="sm" onClick={() => setSelectedPet(pet)}>

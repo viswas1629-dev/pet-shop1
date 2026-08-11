@@ -10,6 +10,7 @@ import { MagneticButton } from '../components/ui/MagneticButton'
 
 import { foodData } from '../data/foodData'
 import { getWhatsAppUrl, createFoodWhatsAppMessage } from '../utils/whatsapp'
+import { formatCurrency } from '../utils/formatCurrency'
 
 export const PetFood: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
@@ -144,9 +145,9 @@ export const PetFood: React.FC = () => {
                 <div>
                   <div className="text-[10px] text-slate-400 font-bold uppercase">Price</div>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-xl font-extrabold text-slate-900">${food.price}</span>
+                    <span className="text-xl font-extrabold text-slate-900">{formatCurrency(food.price)}</span>
                     {food.originalPrice && (
-                      <span className="text-xs text-slate-400 line-through">${food.originalPrice}</span>
+                      <span className="text-xs text-slate-400 line-through">{formatCurrency(food.originalPrice)}</span>
                     )}
                   </div>
                 </div>

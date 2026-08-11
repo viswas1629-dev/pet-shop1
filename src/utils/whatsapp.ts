@@ -1,11 +1,12 @@
 import type { Pet, PetFood } from '../types'
+import { formatCurrency } from './formatCurrency'
 
 export const WHATSAPP_NUMBER = '6381793062'
 
 export const createGeneralWhatsAppMessage = (): string => {
   return `Hello Mr & Mrs Team! 🐾
 
-I would like to enquire about visiting your pet shop / sanctuary.
+I would like to enquire about visiting your pet shop.
 
 Customer Details:
 Full Name: ____________________
@@ -33,7 +34,7 @@ Mr & Mrs Customer`
 export const createPetWhatsAppMessage = (pet: Pet): string => {
   return `Hello Mr & Mrs Team! 🐾
 
-I am interested in booking / visiting the following pet:
+I am interested in visiting / enquiring about the following pet:
 
 ━━━━━━━━━━━━━━━━━━
 PET DETAILS
@@ -44,7 +45,7 @@ Category: ${pet.category}
 Breed: ${pet.breed}
 Age: ${pet.age}
 Gender: ${pet.gender}
-Price: $${pet.price}
+Price: ${formatCurrency(pet.price)}
 Availability: ${pet.availability}
 Pet ID: ${pet.id}
 
@@ -72,7 +73,7 @@ ____________________
 Additional Notes:
 ____________________
 
-Please let me know whether this pet is currently available and how I can proceed with the visit/booking.
+Please let me know whether this pet is currently available and how I can proceed with the visit/enquiry.
 
 Thank you!
 Mr & Mrs Customer`
@@ -92,7 +93,7 @@ Brand: ${food.brand}
 Category: ${food.targetCategory}
 Suitable For: ${food.targetCategory}
 Weight: ${food.weight}
-Price: $${food.price}
+Price: ${formatCurrency(food.price)}
 Availability: In Stock
 
 Key Ingredients:
@@ -134,6 +135,25 @@ Please confirm the product availability, final price, and next steps.
 
 Thank you!
 Mr & Mrs Customer`
+}
+
+export const createPetCareSupportWhatsAppMessage = (): string => {
+  return `Hello, I recently purchased a pet from your shop and I would like some guidance on how to care for it.
+
+Pet Details:
+Pet Name: [Please enter pet name]
+Pet Type/Breed: [Please enter pet type or breed]
+
+I would like to know about:
+• Recommended food
+• Feeding quantity
+• Feeding frequency
+• Basic daily care
+• Other important care instructions
+
+Please guide me on the proper basic care for this pet.
+
+Thank you.`
 }
 
 export const getWhatsAppUrl = (message: string): string => {

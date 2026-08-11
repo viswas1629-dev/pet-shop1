@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
     formState: { errors, isSubmitting }
   } = useForm<ContactFormInput>({
     defaultValues: {
-      interest: 'Pet Adoption'
+      interest: 'Pet Purchase'
     }
   })
 
@@ -69,7 +69,7 @@ export const Contact: React.FC = () => {
     },
     {
       title: 'Direct VIP Line',
-      desc: 'Sanctuary booking line',
+      desc: 'Pet shop enquiry line',
       value: '+1 (800) 555-7297',
       icon: Phone,
       color: 'bg-blue-50 text-blue-600 border-blue-100',
@@ -120,7 +120,7 @@ export const Contact: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
         >
-          Schedule a private sanctuary consultation, arrange VIP pet transport, or speak directly with our veterinary nutritionists.
+          Schedule a private store visit, arrange VIP pet transport, or speak directly with our veterinary nutritionists.
         </motion.p>
       </section>
 
@@ -161,7 +161,7 @@ export const Contact: React.FC = () => {
                 Send a personal Mail
               </h2>
               <p className="text-xs text-slate-500 mb-8">
-                Fill in your details below. Our sanctuary director will respond within 2 business hours.
+                Fill in your details below. Our pet shop team will respond within 2 business hours.
               </p>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -220,11 +220,10 @@ export const Contact: React.FC = () => {
                       {...register('interest')}
                       className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slate-900 focus:outline-none focus:border-blue-600 focus:bg-white transition-all"
                     >
-                      <option value="Pet Adoption">Companion Pet Adoption</option>
+                      <option value="Pet Purchase">Companion Pet Purchase</option>
                       <option value="Organic Nutrition">Artisanal Pet Food & Diets</option>
-                      <option value="Luxury Spa & Grooming">Spa & Grooming Retreat</option>
-                      <option value="Hotel Boarding">Palace Resort Boarding</option>
-                      <option value="General Inquiry">General Concierge Inquiry</option>
+                      <option value="Pet Care Support">Post-Purchase Pet Care Guidance</option>
+                      <option value="General Inquiry">General Store Inquiry</option>
                     </select>
                   </div>
                 </div>

@@ -61,7 +61,7 @@ export const PrivacyPolicy: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-6"
         >
-          Your privacy is paramount. This policy outlines how Mr & Mrs handles customer enquiries, protects personal contact details, and maintains transparent communication standards across our sanctuary services.
+          Your privacy is paramount. This policy outlines how Mr & Mrs handles customer enquiries, protects personal contact details, and maintains transparent communication standards across our pet shop services.
         </motion.p>
 
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100/80 border border-slate-200/80 text-xs font-semibold text-slate-600">
@@ -116,7 +116,7 @@ export const PrivacyPolicy: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  We collect personal information that you voluntarily provide to us when expressing interest in our companion pets, artisanal nutrition products, sanctuary visits, or general services.
+                  We collect personal information that you voluntarily provide to us when expressing interest in our companion pets, artisanal nutrition products, store visits, or general services.
                 </p>
 
                 <div className="space-y-3 text-xs text-slate-700">
@@ -178,7 +178,7 @@ export const PrivacyPolicy: React.FC = () => {
                 <ul className="space-y-2.5 text-xs text-slate-600 list-disc list-inside leading-relaxed pl-1">
                   <li><strong className="text-slate-900">Enquiry Response:</strong> To answer questions regarding companion pets, availability, pricing, and health passports.</li>
                   <li><strong className="text-slate-900">Nutritional Guidance:</strong> To process Pet Food enquiries and assist with custom dietary calculations.</li>
-                  <li><strong className="text-slate-900">Sanctuary Visits:</strong> To coordinate private appointments, showroom tours, and VIP introductions.</li>
+                  <li><strong className="text-slate-900">Store Visits:</strong> To coordinate private appointments, showroom tours, and VIP introductions.</li>
                   <li><strong className="text-slate-900">Direct Customer Communication:</strong> To send follow-up correspondence regarding ongoing requests.</li>
                 </ul>
               </GlassCard>
@@ -289,7 +289,7 @@ export const PrivacyPolicy: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Customer enquiry records are retained only for as long as necessary to fulfill the relevant communication, assist with sanctuary visits, or comply with legal and accounting standards.
+                  Customer enquiry records are retained only for as long as necessary to fulfill the relevant communication, assist with store visits, or comply with legal and accounting standards.
                 </p>
               </GlassCard>
             </div>
@@ -380,7 +380,7 @@ export const PrivacyPolicy: React.FC = () => {
                   </div>
 
                   <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80">
-                    <span className="text-[10px] uppercase font-bold text-amber-400 block mb-1">Sanctuary Address</span>
+                    <span className="text-[10px] uppercase font-bold text-amber-400 block mb-1">Store Address</span>
                     <span>[BUSINESS ADDRESS]</span>
                   </div>
                 </div>

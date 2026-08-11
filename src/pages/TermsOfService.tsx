@@ -41,7 +41,7 @@ export const TermsOfService: React.FC = () => {
       <section className="relative py-16 text-center max-w-5xl mx-auto px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <Badge variant="blue" icon={<Scale className="w-3.5 h-3.5" />} pulse>
-            Sanctuary Governance & Terms
+            Pet Shop Terms & Governance
           </Badge>
         </motion.div>
 
@@ -94,7 +94,7 @@ export const TermsOfService: React.FC = () => {
 
               <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-500 flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Transparent Sanctuary Operation Standards</span>
+                <span>Transparent Pet Shop Operation Standards</span>
               </div>
             </GlassCard>
           </div>
@@ -115,7 +115,7 @@ export const TermsOfService: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  The Paw & Palace website is designed as an informational showcase and enquiry portal for our luxury companion pets, artisanal organic nutrition formulas, and sanctuary concierge services. This website does not directly process automated e-commerce payments, online card checkouts, or binding automated sales transactions.
+                  The Paw & Palace website is designed as an informational showcase and enquiry portal for our luxury companion pets, artisanal organic nutrition formulas, and pet shop concierge services. This website does not directly process automated e-commerce payments, online card checkouts, or binding automated sales transactions.
                 </p>
               </GlassCard>
             </div>
@@ -134,12 +134,12 @@ export const TermsOfService: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                  All pet profiles displayed on this website represent active or recent companion arrivals at our sanctuary. Please note:
+                  All pet profiles displayed on this website represent active or recent companion arrivals at our pet shop. Please note:
                 </p>
 
                 <ul className="space-y-2.5 text-xs text-slate-600 list-disc list-inside leading-relaxed pl-1">
                   <li>Companion listings, status tags (e.g. Available, Reserved), and pricing are subject to real-time update and modification.</li>
-                  <li>Pet availability is strictly confirmed upon direct communication with our sanctuary management via WhatsApp or email.</li>
+                  <li>Pet availability is strictly confirmed upon direct communication with our pet shop management via WhatsApp or email.</li>
                   <li>Viewing a pet listing on the website does not guarantee that the specific companion remains unreserved until confirmed directly with our team.</li>
                 </ul>
               </GlassCard>
@@ -208,7 +208,7 @@ export const TermsOfService: React.FC = () => {
                     • A pre-filled or sent WhatsApp message does NOT automatically constitute a binding sale, financial agreement, or confirmed companion reservation.
                   </p>
                   <p className="font-semibold">
-                    • All adoptions, sanctuary visits, and orders are finalized through mutual direct agreement with our management.
+                    • All pet purchases, store visits, and orders are finalized through mutual direct agreement with our management.
                   </p>
                 </div>
               </GlassCard>
@@ -323,7 +323,7 @@ export const TermsOfService: React.FC = () => {
                 </div>
 
                 <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  For inquiries regarding these Terms of Service or official sanctuary communication, please contact us:
+                  For inquiries regarding these Terms of Service or official pet shop communication, please contact us:
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-semibold text-slate-200">

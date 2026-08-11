@@ -63,23 +63,11 @@ export interface Review {
   verifiedBuyer: boolean
 }
 
-export interface Service {
-  id: string
-  title: string
-  tagline: string
-  description: string
-  iconName: string
-  features: string[]
-  badge: string
-  priceStarting: string
-  image: string
-}
-
 export interface FAQItem {
   id: string
   question: string
   answer: string
-  category: 'Adoption' | 'Health & Care' | 'Shipping & Visits' | 'Nutrition'
+  category: 'Pet Purchase' | 'Store Visits' | 'Adoption' | 'Health & Care' | 'Shipping & Visits' | 'Nutrition'
 }
 
 export interface TimelineEvent {

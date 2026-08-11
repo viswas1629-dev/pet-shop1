@@ -63,13 +63,13 @@ export const Footer: React.FC = () => {
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold tracking-tight text-white">PAW & PALACE</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400">
-                  Luxury Companion Sanctuary
+                  Luxury Pet Boutique
                 </span>
               </div>
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-md">
-              Paw & Palace is an internationally acclaimed companion sanctuary. We curate ethically raised purebred pets, organic veterinary nutrition, and bespoke wellness care for elite pet families worldwide.
+              Paw & Palace is a premium pet store. We curate ethically raised purebred pets, organic veterinary nutrition, and bespoke care for pet lovers worldwide.
             </p>
 
             <div className="flex items-center gap-4 text-slate-400 pt-2">
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Navigation Links */}
           <div className="flex flex-col gap-3">
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-2">Sanctuary Pages</h4>
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-2">Pet Shop</h4>
             <Link to="/" className="text-slate-400 text-sm hover:text-white transition-colors">Home Landing</Link>
             <Link to="/pets" className="text-slate-400 text-sm hover:text-white transition-colors">Companion Pets</Link>
             <Link to="/food" className="text-slate-400 text-sm hover:text-white transition-colors">Artisanal Nutrition</Link>

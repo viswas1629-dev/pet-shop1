@@ -6,6 +6,7 @@ import { Crown } from 'lucide-react'
 
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
+import { ScrollToTop } from './components/layout/ScrollToTop'
 import { AmbientBlobs } from './components/ui/FloatingElements'
 import { useLenis } from './hooks/useLenis'
 
@@ -29,7 +30,7 @@ const LoadingFallback = () => (
       <Crown className="w-8 h-8" />
     </motion.div>
     <span className="text-xs font-bold uppercase tracking-widest text-blue-600 animate-pulse">
-      Paw & Palace Sanctuary
+      Paw & Palace Pet Boutique
     </span>
   </div>
 )
@@ -58,6 +59,7 @@ const AnimatedRoutes = () => {
 export function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="relative min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
         {/* Ambient Animated Blobs */}
         <AmbientBlobs />

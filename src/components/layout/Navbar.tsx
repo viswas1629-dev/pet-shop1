@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
                 Mr & Mrs
               </span>
               <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 mt-0.5">
-                Luxury Boutique
+                Luxury Pet Boutique
               </span>
             </div>
           </Link>
@@ -97,7 +97,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center gap-3 pointer-events-auto">
             <a href={generalWhatsAppUrl} target="_blank" rel="noreferrer">
               <MagneticButton variant="primary" size="md" icon={<Sparkles className="w-4 h-4" />}>
-                Book Sanctuary Visit
+                Visit Our Pet Shop
               </MagneticButton>
             </a>
           </div>
@@ -160,7 +160,7 @@ export const Navbar: React.FC = () => {
                   <span>24/7 VIP Pet Concierge</span>
                 </div>
                 <p className="text-xs text-slate-600">
-                  Call our dedicated sanctuary advisors anytime for private visits or emergency advice.
+                  Call our dedicated pet shop advisors anytime for store visits or advice.
                 </p>
                 <a
                   href="tel:+18005557297"
@@ -172,7 +172,7 @@ export const Navbar: React.FC = () => {
 
               <a href={generalWhatsAppUrl} target="_blank" rel="noreferrer" className="w-full">
                 <MagneticButton variant="primary" size="lg" className="w-full">
-                  Book VIP Sanctuary Visit
+                  Visit Our Pet Shop
                 </MagneticButton>
               </a>
             </div>

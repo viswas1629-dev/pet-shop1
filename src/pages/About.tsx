@@ -32,7 +32,7 @@ export const About: React.FC = () => {
       <section className="relative py-16 text-center max-w-5xl mx-auto px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <Badge variant="blue" icon={<Crown className="w-3.5 h-3.5" />} pulse>
-            Our Sanctuary Ethos
+            Our Pet Shop Ethos
           </Badge>
         </motion.div>
 
@@ -52,7 +52,7 @@ export const About: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
         >
-          Founded in 2012, Mr & Mrs emerged from a simple realization: companion pets deserve the exact same standard of luxury, medical precision, and cage-free sanctuary living as human royalty.
+          Founded in 2012, Mr & Mrs emerged from a simple realization: companion pets deserve the exact same standard of luxury, medical precision, and comfortable living as human royalty.
         </motion.p>
       </section>
 
@@ -64,12 +64,12 @@ export const About: React.FC = () => {
           <div className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border-4 border-white glass-card">
             <img
               src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=1000"
-              alt="Mr & Mrs Sanctuary Staff"
+              alt="Mr & Mrs Pet Shop Staff"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
-              <div className="text-xs font-bold uppercase tracking-wider text-blue-300">Sanctuary Haven</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-blue-300">Pet Shop Boutique</div>
               <h3 className="text-xl font-extrabold">Where Love Meets Medical Excellence</h3>
             </div>
           </div>
@@ -80,7 +80,7 @@ export const About: React.FC = () => {
               Ethical Breeding. Zero Cages. Lifetime Harmony.
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
-              We reject high-density breeding facilities and commercial cages. Every puppy, kitten, bird, and reptile under our care matures in sunlit suites with soft ambient classical music, organic nutrition, and dedicated daily socialization experts.
+              We reject high-density breeding facilities and commercial cages. Every puppy, kitten, bird, and reptile under our care matures in sunlit suites with soft ambient classical music, organic nutrition, and dedicated daily care experts.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full pt-4">
@@ -111,7 +111,7 @@ export const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-bold uppercase tracking-wider mb-3 inline-block">
-              Sanctuary Milestones
+              Pet Store Milestones
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Our 15-Year Journey</h2>
           </div>
@@ -145,7 +145,7 @@ export const About: React.FC = () => {
       {/* ============================================================ */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mb-20">
         <SectionHeader
-          eyebrow="Sanctuary Location"
+          eyebrow="Store Location"
           eyebrowIcon={<MapPin className="w-3.5 h-3.5" />}
           eyebrowVariant="coral"
           title="Visit Our Mayfair & Beverly Hills Suites"
@@ -157,14 +157,14 @@ export const About: React.FC = () => {
           <div className="lg:col-span-8 glass-card p-0 rounded-3xl overflow-hidden min-h-[350px] relative flex items-center justify-center bg-slate-200">
             <img
               src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1200"
-              alt="Sanctuary Location Map Preview"
+              alt="Pet Store Location Map Preview"
               className="w-full h-full object-cover opacity-80"
             />
             <div className="absolute inset-0 bg-slate-950/30 backdrop-blur-[2px]" />
 
             <div className="absolute z-10 glass-card p-6 rounded-2xl max-w-sm text-center shadow-2xl border border-white">
               <MapPin className="w-8 h-8 text-rose-500 mx-auto mb-2 animate-bounce" />
-              <h3 className="text-lg font-extrabold text-slate-900">Mr & Mrs Sanctuary</h3>
+              <h3 className="text-lg font-extrabold text-slate-900">Mr & Mrs Pet Boutique</h3>
               <p className="text-xs text-slate-600 mt-1 mb-4">
                 740 Royal Avenue, Mayfair, London W1J 7BR
               </p>
@@ -220,7 +220,7 @@ export const About: React.FC = () => {
           eyebrowIcon={<Sparkles className="w-3.5 h-3.5" />}
           eyebrowVariant="blue"
           title="Frequently Asked Questions"
-          subtitle="Everything you need to know about our adoption process, health guarantee, and transport protocol."
+          subtitle="Everything you need to know about our purchasing process, health guarantee, and transport protocol."
         />
 
         <div className="space-y-4">

@@ -5,6 +5,7 @@ import type { Pet } from '../../types'
 import { Badge } from './Badge'
 import { MagneticButton } from './MagneticButton'
 import { getWhatsAppUrl, createPetWhatsAppMessage } from '../../utils/whatsapp'
+import { formatCurrency } from '../../utils/formatCurrency'
 import toast from 'react-hot-toast'
 
 interface PetModalProps {
@@ -134,7 +135,7 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, onClose }) => {
                   <h2 className="text-3xl font-extrabold text-slate-900 mb-2">{pet.name}</h2>
 
                   <div className="text-2xl font-bold text-blue-600 mb-4">
-                    ${pet.price.toLocaleString()}
+                    {formatCurrency(pet.price)}
                     <span className="text-xs font-normal text-slate-500 ml-2">Inc. Complete Vet Package</span>
                   </div>
 
@@ -192,7 +193,7 @@ export const PetModal: React.FC<PetModalProps> = ({ pet, onClose }) => {
                       className="w-full"
                       icon={<PhoneCall className="w-4 h-4" />}
                     >
-                      Book via WhatsApp
+                      Enquire via WhatsApp
                     </MagneticButton>
                   </a>
                 </div>

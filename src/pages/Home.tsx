@@ -12,7 +12,8 @@ import {
   CheckCircle,
   PhoneCall,
   ChevronDown,
-  Compass
+  Compass,
+  MessageSquare
 } from 'lucide-react'
 
 // Swiper imports
@@ -34,7 +35,8 @@ import { InstagramIcon } from '../components/ui/SocialIcons'
 
 import { petsData } from '../data/petsData'
 import { reviewsData } from '../data/reviewsData'
-import { servicesData } from '../data/servicesData'
+import { formatCurrency } from '../utils/formatCurrency'
+import { getWhatsAppUrl, createPetCareSupportWhatsAppMessage } from '../utils/whatsapp'
 import type { Pet } from '../types'
 
 export const Home: React.FC = () => {
@@ -55,7 +57,7 @@ export const Home: React.FC = () => {
     { url: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=800', title: 'Royalty Purebred Care' },
     { url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=800', title: 'Feline Luxury Suites' },
     { url: 'https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=800', title: 'Puppy Socialization Labs' },
-    { url: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&q=80&w=800', title: 'Avian Sanctuary Havens' },
+    { url: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&q=80&w=800', title: 'Avian Play Havens' },
     { url: 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&q=80&w=800', title: 'Aquascaping Masterpieces' },
     { url: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&q=80&w=800', title: 'Organic Nutrition Bar' }
   ]
@@ -76,7 +78,7 @@ export const Home: React.FC = () => {
               className="mb-6"
             >
               <Badge variant="blue" icon={<Crown className="w-3.5 h-3.5" />} pulse>
-                International Companion Sanctuary 2025
+                International Premium Pet Shop 2025
               </Badge>
             </motion.div>
 
@@ -96,7 +98,7 @@ export const Home: React.FC = () => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed max-w-2xl mb-8"
             >
-              Step into an extraordinary sanctuary for purebred companions, organic veterinary nutrition, and 5-star spa retreats. Every pet is DNA certified and health guaranteed.
+              Step into an extraordinary pet boutique for purebred companions, organic veterinary nutrition, and 5-star spa retreats. Every pet is DNA certified and health guaranteed.
             </motion.p>
 
             {/* CTAs & Micro-Proof */}
@@ -113,7 +115,7 @@ export const Home: React.FC = () => {
               </Link>
               <Link to="/contact">
                 <MagneticButton variant="outline" size="xl">
-                  Book VIP Visit
+                  Visit Our Pet Shop
                 </MagneticButton>
               </Link>
             </motion.div>
@@ -135,7 +137,7 @@ export const Home: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-rose-500" />
-                <span>Zero Cage Sanctuary</span>
+                <span>Spacious & Clean Habitats</span>
               </div>
             </motion.div>
           </div>
@@ -307,8 +309,8 @@ export const Home: React.FC = () => {
 
                     <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                       <div>
-                        <div className="text-[10px] font-bold text-slate-400 uppercase">Adoption Fee</div>
-                        <div className="text-lg font-bold text-slate-900">${pet.price}</div>
+                        <div className="text-[10px] font-bold text-slate-400 uppercase">Price</div>
+                        <div className="text-lg font-bold text-slate-900">{formatCurrency(pet.price)}</div>
                       </div>
 
                       <MagneticButton
@@ -336,8 +338,8 @@ export const Home: React.FC = () => {
             eyebrow="Our Sacred Vow"
             eyebrowIcon={<ShieldCheck className="w-3.5 h-3.5" />}
             eyebrowVariant="emerald"
-            title="The Mr & Mrs Care Guarantee"
-            subtitle="We set the international standard for companion health, ethical breeding, and lifetime post-adoption concierge."
+            title="The Mr & Mrs Pet Care Guarantee"
+            subtitle="We set the international standard for companion health, ethical care, and lifetime post-purchase concierge."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -358,9 +360,9 @@ export const Home: React.FC = () => {
               <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-6">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">100% Cage-Free Sanctuary Habitats</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Spacious & Hygienic Pet Habitats</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                Our pets live in expansive, sunlit suites with soft memory bedding, play lawns, and 24/7 human warmth.
+                Our pets live in expansive, sunlit suites with soft memory bedding, play areas, and 24/7 human care.
               </p>
               <span className="text-xs font-bold text-emerald-700 flex items-center gap-1">
                 <CheckCircle className="w-3.5 h-3.5" /> Ethical & Humane Standard
@@ -371,12 +373,12 @@ export const Home: React.FC = () => {
               <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-700 flex items-center justify-center mb-6">
                 <PhoneCall className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Lifetime Tele-Vet & Nutrition Care</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Post-Purchase Care & Guidance</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                You receive lifetime direct access to our senior veterinary team and dietary advisors around the clock.
+                Get direct assistance on feeding portions, daily care, and routine pet care questions whenever you need help.
               </p>
               <span className="text-xs font-bold text-orange-700 flex items-center gap-1">
-                <CheckCircle className="w-3.5 h-3.5" /> VIP Concierge Included
+                <CheckCircle className="w-3.5 h-3.5" /> Free Guidance Included
               </span>
             </GlassCard>
           </div>
@@ -384,56 +386,72 @@ export const Home: React.FC = () => {
       </section>
 
       {/* ============================================================ */}
-      {/* 5. OUR SERVICES */}
+      {/* 5. AFTER-PURCHASE PET CARE SUPPORT */}
       {/* ============================================================ */}
-      <section className="py-20 relative bg-slate-900 text-white rounded-3xl my-12 overflow-hidden mx-4 sm:mx-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-bold uppercase tracking-wider mb-3 inline-block">
-              Bespoke Sanctuary Offerings
+      <section className="py-16 relative bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white rounded-3xl my-12 overflow-hidden mx-4 sm:mx-8 shadow-2xl border border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Left Column: Text & Guidance CTA */}
+          <div className="lg:col-span-7 flex flex-col items-start">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold uppercase tracking-wider mb-4">
+              <Heart className="w-3.5 h-3.5 text-emerald-400" /> Post-Purchase Support
             </span>
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
-              World-Class Care Services
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+              Need Help Caring for Your New Pet?
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base mt-3">
-              From organic hydrotherapy spas to 5-star resort boarding, we cater to every luxury requirement.
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+              Bring your new companion home with confidence. Our team can guide you on basic feeding, food quantity, daily care, and other pet-care questions after your purchase.
             </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {servicesData.map((srv) => (
-              <div
-                key={srv.id}
-                className="bg-slate-800/80 border border-slate-700 rounded-3xl p-6 flex flex-col justify-between hover:border-blue-500/60 transition-all group"
-              >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-8 text-xs">
+              <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <div className="relative aspect-16/10 rounded-2xl overflow-hidden mb-5">
-                    <img
-                      src={srv.image}
-                      alt={srv.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-3 left-3">
-                      <span className="px-2.5 py-1 rounded-full bg-slate-950/80 text-white text-[10px] font-bold">
-                        {srv.badge}
-                      </span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-2">{srv.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed mb-4">{srv.description}</p>
-                </div>
-
-                <div className="pt-4 border-t border-slate-700/80 flex items-center justify-between">
-                  <span className="text-xs font-bold text-emerald-400">From {srv.priceStarting}</span>
-                  <Link to="/contact">
-                    <span className="text-xs font-bold text-blue-400 hover:text-white flex items-center gap-1">
-                      Reserve <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </Link>
+                  <strong className="text-white block font-bold mb-0.5">Feeding & Portion Advice</strong>
+                  <span className="text-slate-400">Recommended food types, quantity per meal, and daily feeding frequency.</span>
                 </div>
               </div>
-            ))}
+
+              <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-white block font-bold mb-0.5">Daily Care & Home Setup</strong>
+                  <span className="text-slate-400">Essential instructions for a smooth transition to your home.</span>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href={getWhatsAppUrl(createPetCareSupportWhatsAppMessage())}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MagneticButton
+                variant="primary"
+                size="xl"
+                icon={<MessageSquare className="w-5 h-5" />}
+              >
+                Ask About Pet Care
+              </MagneticButton>
+            </a>
+          </div>
+
+          {/* Right Column: Hero Care Visual */}
+          <div className="lg:col-span-5 relative flex justify-center">
+            <div className="relative w-full max-w-md aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-700/80 group">
+              <img
+                src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&q=80&w=1000"
+                alt="Owner caring for pet at home"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 mb-1">
+                  100% Free Owner Support
+                </div>
+                <div className="text-lg font-extrabold">Pet Care Guidance</div>
+                <p className="text-xs text-slate-300 mt-1">Direct WhatsApp assistance for all your pet care queries.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -448,8 +466,8 @@ export const Home: React.FC = () => {
               <div className="text-4xl sm:text-5xl font-extrabold text-blue-600 mb-2 font-heading">
                 <AnimatedCounter end={4800} suffix="+" />
               </div>
-              <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Happy Pets Adopted</div>
-              <div className="text-[11px] text-slate-500 mt-1">Across 32 Countries</div>
+              <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Happy Pets Welcomed</div>
+              <div className="text-[11px] text-slate-500 mt-1">Across 32 Cities</div>
             </GlassCard>
 
             <GlassCard className="p-8 text-center flex flex-col items-center">
@@ -472,7 +490,7 @@ export const Home: React.FC = () => {
               <div className="text-4xl sm:text-5xl font-extrabold text-purple-600 mb-2 font-heading">
                 <AnimatedCounter end={15} suffix=" Yrs" />
               </div>
-              <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Sanctuary Excellence</div>
+              <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">Pet Store Excellence</div>
               <div className="text-[11px] text-slate-500 mt-1">Established 2012</div>
             </GlassCard>
           </div>
@@ -536,7 +554,7 @@ export const Home: React.FC = () => {
             eyebrowIcon={<InstagramIcon className="w-3.5 h-3.5" />}
             eyebrowVariant="coral"
             title="Life Inside Mr & Mrs"
-            subtitle="Follow our daily moments of warmth, play, and sanctuary serenity."
+            subtitle="Follow our daily moments of warmth, play, and boutique joy."
           />
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
