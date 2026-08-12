@@ -2,7 +2,6 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { motion } from 'framer-motion'
 import {
-  Send,
   Phone,
   Mail,
   MapPin,
@@ -17,38 +16,44 @@ import { Badge } from '../components/ui/Badge'
 import { MagneticButton } from '../components/ui/MagneticButton'
 import { InstagramIcon, FacebookIcon, YoutubeIcon } from '../components/ui/SocialIcons'
 
-import { sendContactEnquiry, type ContactFormInput } from '../utils/email'
+import {
+  getWhatsAppUrl,
+  createContactWhatsAppMessage,
+  type ContactFormInput
+} from '../utils/whatsapp'
 import toast from 'react-hot-toast'
 
 export const Contact: React.FC = () => {
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { errors, isSubmitting }
+    formState: { errors }
   } = useForm<ContactFormInput>({
     defaultValues: {
       interest: 'Pet Purchase'
     }
   })
 
-  const onSubmit = async (data: ContactFormInput) => {
+  const onSubmit = (data: ContactFormInput) => {
     try {
-      await sendContactEnquiry(data)
-      toast.success('Your request has been sent successfully. Our team will get back to you soon.', {
-        duration: 5000,
-        icon: '✨',
+      const message = createContactWhatsAppMessage(data)
+      const whatsappUrl = getWhatsAppUrl(message)
+
+      toast.success('Opening WhatsApp...', {
+        duration: 4000,
+        icon: '💬',
         style: {
           borderRadius: '16px',
           background: '#ffffff',
           color: '#1e293b'
         }
       })
-      reset()
+
+      window.open(whatsappUrl, '_blank')
     } catch (error) {
-      console.error('EmailJS Submission Error:', error)
-      toast.error("We couldn't send your request right now. Please try again or contact us directly on WhatsApp.", {
-        duration: 6000,
+      console.error('WhatsApp Error:', error)
+      toast.error('Unable to open WhatsApp. Please try again.', {
+        duration: 5000,
         style: {
           borderRadius: '16px',
           background: '#ffffff',
@@ -158,10 +163,10 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-7">
             <GlassCard className="p-8 sm:p-10">
               <h2 className="text-2xl font-extrabold text-slate-900 mb-2">
-                Send a personal Mail
+                Send us a WhatsApp Enquiry
               </h2>
               <p className="text-xs text-slate-500 mb-8">
-                Fill in your details below. Our pet shop team will respond within 2 business hours.
+                Fill in your details below and send your enquiry directly to our pet shop team on WhatsApp.
               </p>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -248,11 +253,10 @@ export const Contact: React.FC = () => {
                   type="submit"
                   variant="primary"
                   size="lg"
-                  icon={<Send className="w-4 h-4" />}
-                  disabled={isSubmitting}
+                  icon={<MessageSquare className="w-4 h-4" />}
                   className="w-full"
                 >
-                  {isSubmitting ? 'Sending Request...' : 'Submit Email Request'}
+                  Send WhatsApp Enquiry
                 </MagneticButton>
               </form>
             </GlassCard>

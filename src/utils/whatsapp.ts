@@ -3,6 +3,14 @@ import { formatCurrency } from './formatCurrency'
 
 export const WHATSAPP_NUMBER = '6381793062'
 
+export interface ContactFormInput {
+  name: string
+  email: string
+  phone?: string
+  interest: string
+  message: string
+}
+
 export const createGeneralWhatsAppMessage = (): string => {
   return `Hello Mr & Mrs Team! 🐾
 
@@ -152,6 +160,36 @@ I would like to know about:
 • Other important care instructions
 
 Please guide me on the proper basic care for this pet.
+
+Thank you.`
+}
+
+export const createContactWhatsAppMessage = (formData: ContactFormInput): string => {
+  const customerName = formData.name.trim()
+  const customerEmail = formData.email.trim()
+  const customerPhone = (formData.phone || '').trim() || 'N/A'
+  const primaryInterest = formData.interest
+  const customerMessage = formData.message.trim()
+
+  return `Hello Mr & Mrs Pet Shop Team! 👋
+
+I would like to make an enquiry about your pet shop.
+
+Customer Details
+----------------
+Full Name: ${customerName}
+Email: ${customerEmail}
+Phone / WhatsApp: ${customerPhone}
+
+Enquiry Type
+------------
+Primary Interest: ${primaryInterest}
+
+Message / Special Request
+-------------------------
+${customerMessage}
+
+I would like to know more details regarding my enquiry.
 
 Thank you.`
 }

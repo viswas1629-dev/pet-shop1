@@ -1,59 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Crown, Heart, Send, Phone, Mail, MapPin, ShieldCheck, Award } from 'lucide-react'
+import { Crown, Heart, Phone, Mail, MapPin, ShieldCheck, Award } from 'lucide-react'
 import { InstagramIcon, FacebookIcon, YoutubeIcon } from '../ui/SocialIcons'
-import { MagneticButton } from '../ui/MagneticButton'
-import toast from 'react-hot-toast'
 
 export const Footer: React.FC = () => {
-  const handleNewsletter = (e: React.FormEvent) => {
-    e.preventDefault()
-    toast.success('Thank you for subscribing to Paw & Palace VIP Dispatch!', {
-      icon: '✨',
-      style: {
-        borderRadius: '16px',
-        background: '#ffffff',
-        color: '#1e293b'
-      }
-    })
-  }
-
   return (
-    <footer className="relative z-10 bg-slate-900 text-slate-300 pt-20 pb-12 overflow-hidden rounded-t-[2.5rem] mt-20">
+    <footer className="relative z-10 bg-slate-900 text-slate-300 pt-14 pb-10 overflow-hidden rounded-t-[2.5rem] mt-16">
       {/* Background ambient glow */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-        {/* Top Newsletter Card */}
-        <div className="relative mb-16 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-blue-900/90 via-slate-900 to-emerald-950/80 border border-slate-700/60 shadow-2xl overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="max-w-xl text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-bold uppercase tracking-wider mb-3">
-              <Crown className="w-3.5 h-3.5" /> VIP Inner Circle
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-              Receive Priority Access to Rare Companion Arrivals & Private Invitations
-            </h3>
-            <p className="text-slate-400 text-sm mt-2">
-              Join 12,000+ discerning pet lovers. Zero spam, only pure luxury updates.
-            </p>
-          </div>
-
-          <form onSubmit={handleNewsletter} className="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              required
-              placeholder="Enter your personal email address..."
-              className="w-full sm:w-80 px-5 py-3.5 rounded-full bg-slate-800/90 border border-slate-600 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-blue-400 transition-colors"
-            />
-            <MagneticButton type="submit" variant="primary" size="md" icon={<Send className="w-4 h-4" />}>
-              Subscribe VIP
-            </MagneticButton>
-          </form>
-        </div>
-
         {/* Core Footer Navigation Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
           {/* Col 1: Brand & Tagline */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             <Link to="/" className="flex items-center gap-3">

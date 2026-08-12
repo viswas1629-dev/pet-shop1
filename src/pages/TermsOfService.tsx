@@ -228,7 +228,7 @@ export const TermsOfService: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  When submitting an enquiry through our Contact form, the information provided (Name, Email, Phone, Primary Interest, Message) is transmitted securely via EmailJS to enable our staff to respond to your specific request. Submitting a form does not subscribe you to automated marketing lists without consent.
+                  When submitting an enquiry through our Contact form, the information provided (Name, Email, Phone, Primary Interest, Message) is formatted into a direct WhatsApp message to enable our staff to respond to your specific request. Submitting a form does not subscribe you to automated marketing lists without consent.
                 </p>
               </GlassCard>
             </div>

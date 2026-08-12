@@ -217,7 +217,7 @@ export const PrivacyPolicy: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Contact-form enquiries submitted through our website are transmitted directly to our business email address using our configured email delivery service (EmailJS). Your email address is used solely to respond to your inquiry. We do not subscribe your email address to unauthorized mailing lists without explicit consent.
+                  Contact-form enquiries submitted through our website are transmitted directly to our pet shop team on WhatsApp. Your email and contact details are used solely to respond to your inquiry. We do not subscribe your email address to unauthorized mailing lists without explicit consent.
                 </p>
               </GlassCard>
             </div>
@@ -245,8 +245,8 @@ export const PrivacyPolicy: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <h4 className="font-bold text-slate-900 mb-1">EmailJS</h4>
-                    <p className="text-slate-500 leading-normal">Processes contact form submissions for direct email dispatch.</p>
+                    <h4 className="font-bold text-slate-900 mb-1">WhatsApp Concierge</h4>
+                    <p className="text-slate-500 leading-normal">Processes contact form submissions into pre-filled direct WhatsApp enquiries.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                     <h4 className="font-bold text-slate-900 mb-1">Vercel</h4>
