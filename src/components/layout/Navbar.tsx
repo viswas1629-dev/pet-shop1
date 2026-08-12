@@ -157,7 +157,7 @@ export const Navbar: React.FC = () => {
               <div className="p-5 rounded-2xl bg-gradient-to-r from-blue-50 to-emerald-50 border border-blue-100/60">
                 <div className="flex items-center gap-2 font-bold text-slate-900 text-sm mb-1">
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  <span>24/7 VIP Pet Concierge</span>
+                  <span>24/7 VIP Pet enquiry</span>
                 </div>
                 <p className="text-xs text-slate-600">
                   Call our dedicated pet shop advisors anytime for store visits or advice.
@@ -166,7 +166,7 @@ export const Navbar: React.FC = () => {
                   href="tel:+18005557297"
                   className="mt-3 inline-flex items-center gap-2 text-xs font-extrabold text-blue-700 hover:underline"
                 >
-                  <Phone className="w-3.5 h-3.5" /> +1 (800) 555-PAWS
+                  <Phone className="w-3.5 h-3.5" /> +91 6381793062
                 </a>
               </div>
 
