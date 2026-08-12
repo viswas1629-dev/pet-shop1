@@ -60,7 +60,7 @@ export const TermsOfService: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed mb-6"
         >
-          Welcome to Paw & Palace. Please review these Terms of Service governing your use of our website, companion pet listings, artisanal food catalog, and enquiry workflows.
+          Welcome to Mr & Mrs. Please review these Terms of Service governing your use of our website, companion pet listings, artisanal food catalog, and enquiry workflows.
         </motion.p>
 
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100/80 border border-slate-200/80 text-xs font-semibold text-slate-600">
@@ -115,7 +115,7 @@ export const TermsOfService: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  The Paw & Palace website is designed as an informational showcase and enquiry portal for our luxury companion pets, artisanal organic nutrition formulas, and pet shop concierge services. This website does not directly process automated e-commerce payments, online card checkouts, or binding automated sales transactions.
+                  The Mr & Mrs Pet Boutique website is designed as an informational showcase and enquiry portal for our luxury companion pets, artisanal organic nutrition formulas, and pet shop concierge services. This website does not directly process automated e-commerce payments, online card checkouts, or binding automated sales transactions.
                 </p>
               </GlassCard>
             </div>
@@ -247,7 +247,7 @@ export const TermsOfService: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  All trademarks, logos, brand names, visual designs, imagery, graphics, and textual content on this website are the property of Paw & Palace Companion Boutique Ltd. Unauthorized reproduction, scraping, or commercial reuse without written permission is strictly prohibited.
+                  All trademarks, logos, brand names, visual designs, imagery, graphics, and textual content on this website are the property of Mr & Mrs Pet Boutique Ltd. Unauthorized reproduction, scraping, or commercial reuse without written permission is strictly prohibited.
                 </p>
               </GlassCard>
             </div>
@@ -304,7 +304,7 @@ export const TermsOfService: React.FC = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  This website and its content are provided on an "as-is" and "as-available" basis for general informational purposes. To the fullest extent permitted by law, Paw & Palace disclaims all warranties, express or implied, and shall not be liable for any indirect or consequential damages arising from website usage or temporary service interruptions.
+                  This website and its content are provided on an "as-is" and "as-available" basis for general informational purposes. To the fullest extent permitted by law, Mr & Mrs disclaims all warranties, express or implied, and shall not be liable for any indirect or consequential damages arising from website usage or temporary service interruptions.
                 </p>
               </GlassCard>
             </div>

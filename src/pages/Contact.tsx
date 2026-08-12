@@ -65,20 +65,20 @@ export const Contact: React.FC = () => {
 
   const quickCards = [
     {
-      title: 'WhatsApp Concierge',
+      title: 'WhatsApp chat',
       desc: 'Instant 24/7 direct chat',
-      value: '+1 (800) 555-PAWS',
+      value: '+916381793062',
       icon: MessageSquare,
       color: 'bg-emerald-50 text-emerald-600 border-emerald-100',
-      link: 'https://wa.me/6381793062'
+      link: 'https://wa.me/916381793062'
     },
     {
-      title: 'Direct VIP Line',
+      title: 'Direct Line',
       desc: 'Pet shop enquiry line',
-      value: '+1 (800) 555-7297',
+      value: '+916381793062',
       icon: Phone,
       color: 'bg-blue-50 text-blue-600 border-blue-100',
-      link: 'tel:+18005557297'
+      link: 'tel:+916381793062'
     },
     {
       title: 'Email Support',
@@ -89,9 +89,9 @@ export const Contact: React.FC = () => {
       link: 'mailto:concierge@pawandpalace.com'
     },
     {
-      title: 'Instagram Dispatch',
+      title: 'Instagram enquiry',
       desc: 'Daily behind-the-scenes stories',
-      value: '@PawAndPalaceOfficial',
+      value: '@MrAndMrsPetBoutique',
       icon: InstagramIcon,
       color: 'bg-pink-50 text-pink-600 border-pink-100',
       link: 'https://instagram.com'
@@ -271,16 +271,8 @@ export const Contact: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-slate-900 block">London Headquarters</span>
-                    <span>740 Royal Avenue, Mayfair, London W1J 7BR, United Kingdom</span>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-bold text-slate-900 block">Beverly Hills Haven</span>
-                    <span>450 North Rodeo Drive, Beverly Hills, CA 90210, USA</span>
+                    <span className="font-bold text-slate-900 block">Coimbatore</span>
+                    <span>123/A xxx, coimbatore , tamilnadu</span>
                   </div>
                 </div>
 
@@ -288,7 +280,7 @@ export const Contact: React.FC = () => {
                   <Clock className="w-5 h-5 text-orange-500 shrink-0" />
                   <div>
                     <span className="font-bold text-slate-900 block">Business Hours</span>
-                    <span>Mon - Sat: 9:00 AM - 7:00 PM | Sun: VIP Only</span>
+                    <span>Mon - Sat: 9:00 AM - 7:00 PM </span>
                   </div>
                 </div>
               </div>

@@ -245,7 +245,7 @@ export const PrivacyPolicy: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                    <h4 className="font-bold text-slate-900 mb-1">WhatsApp Concierge</h4>
+                    <h4 className="font-bold text-slate-900 mb-1">WhatsApp chat</h4>
                     <p className="text-slate-500 leading-normal">Processes contact form submissions into pre-filled direct WhatsApp enquiries.</p>
                   </div>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">

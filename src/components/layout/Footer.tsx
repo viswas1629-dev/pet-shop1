@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
                 <Crown className="w-6 h-6" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-extrabold tracking-tight text-white">PAW & PALACE</span>
+                <span className="text-xl font-extrabold tracking-tight text-white">Mr & Mrs Pet Boutique</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400">
                   Luxury Pet Boutique
                 </span>
@@ -28,15 +28,12 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-slate-400 text-sm leading-relaxed max-w-md">
-              Paw & Palace is a premium pet store. We curate ethically raised purebred pets, organic veterinary nutrition, and bespoke care for pet lovers worldwide.
+              Mr & Mrs Pet Boutique is a premium pet store. We curate ethically raised purebred pets, organic veterinary nutrition, and bespoke care for pet lovers worldwide.
             </p>
 
             <div className="flex items-center gap-4 text-slate-400 pt-2">
               <div className="flex items-center gap-1 text-xs font-semibold">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" /> Vet Certified
-              </div>
-              <div className="flex items-center gap-1 text-xs font-semibold">
-                <Award className="w-4 h-4 text-blue-400" /> Awwwards 2025
               </div>
             </div>
           </div>
@@ -66,15 +63,15 @@ export const Footer: React.FC = () => {
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-2">Concierge Reach</h4>
             <div className="flex items-start gap-3 text-slate-400 text-sm">
               <MapPin className="w-4 h-4 text-blue-400 shrink-0 mt-1" />
-              <span>740 Royal Avenue, Mayfair, London & Beverly Hills, CA</span>
+              <span>123/A xxx, coimbatore , tamilnadu</span>
             </div>
             <div className="flex items-center gap-3 text-slate-400 text-sm">
               <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>+1 (800) 555-PAWS</span>
+              <span>+91 6381793062</span>
             </div>
             <div className="flex items-center gap-3 text-slate-400 text-sm">
               <Mail className="w-4 h-4 text-orange-400 shrink-0" />
-              <span>concierge@pawandpalace.com</span>
+              <span>concierge@mrandmrspetboutique.com</span>
             </div>
 
             {/* Social Icons */}
@@ -113,7 +110,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Legal & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            © {new Date().getFullYear()} Paw & Palace Companion Boutique Ltd. All Rights Reserved.
+            © {new Date().getFullYear()} Mr & Mrs Pet Boutique Ltd. All Rights Reserved.
           </div>
           <div className="flex items-center gap-6">
             <Link to="/privacy-policy" className="hover:text-slate-400 transition-colors">Privacy Policy</Link>

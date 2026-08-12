@@ -30,7 +30,7 @@ const LoadingFallback = () => (
       <Crown className="w-8 h-8" />
     </motion.div>
     <span className="text-xs font-bold uppercase tracking-widest text-blue-600 animate-pulse">
-      Paw & Palace Pet Boutique
+      Mr & Mrs Pet Boutique
     </span>
   </div>
 )
