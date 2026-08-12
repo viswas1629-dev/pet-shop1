@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Crown, Heart, Phone, Mail, MapPin, ShieldCheck, Award } from 'lucide-react'
+import { Crown, Heart, Phone, Mail, MapPin, ShieldCheck } from 'lucide-react'
 import { InstagramIcon, FacebookIcon, YoutubeIcon } from '../ui/SocialIcons'
 
 export const Footer: React.FC = () => {
